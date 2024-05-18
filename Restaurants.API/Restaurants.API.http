@@ -39,3 +39,18 @@ Content-Type: application/json
 }
 
 ###
+
+DELETE {{Restaurants.API_HostAddress}}/api/restaurants/4
+
+###
+
+PATCH {{Restaurants.API_HostAddress}}/api/restaurants/3
+Content-Type: application/json
+
+{
+  "Name": "New name",
+  "Description" : "Nice plate",
+  "HasDelivery" : true
+}
+
+###

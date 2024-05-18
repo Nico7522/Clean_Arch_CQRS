@@ -17,6 +17,12 @@ internal class RestaurantsRepository(RestaurantDbContext dbContext)
         return entity.Id;
     }
 
+    public async Task Delete(Restaurant entity)
+    {
+        dbContext.Remove(entity);
+        await dbContext.SaveChangesAsync();
+    }
+
     public async Task<IEnumerable<Restaurant>> GetAllAsync()
     {
         var restaurants = await dbContext.Restaurants.ToListAsync();
@@ -30,4 +36,6 @@ internal class RestaurantsRepository(RestaurantDbContext dbContext)
             .FirstOrDefaultAsync(r => r.Id == id);
         return restaurant;
     }
+
+    public Task SaveChanges() => dbContext.SaveChangesAsync();
 }
