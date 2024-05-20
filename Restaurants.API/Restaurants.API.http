@@ -19,7 +19,7 @@ GET {{Restaurants.API_HostAddress}}/api/restaurants
 
 ###
 
-GET {{Restaurants.API_HostAddress}}/api/restaurants/4
+GET {{Restaurants.API_HostAddress}}/api/restaurants/3
 
 ###
 
@@ -30,12 +30,12 @@ Content-Type: application/json
     "Name": "Le Gourmet Français",
     "Description": "Un restaurant chic offrant une expérience culinaire française authentique avec des ingrédients frais et locaux.",
     "Category": "Italian",
-    "HasDelivery": true,
+    "HasDelivery": false,
     "ContactEmail": "contact@legourmetfrancais.com",
     "ContactNumber": "+33 1 23 45 67 89",
     "City": "Paris",
     "Street": "123 Rue de Rivoli",
-    "PostalCode": "99-777"
+    "PostalCode": "99-778"
 }
 
 ###
@@ -51,6 +51,19 @@ Content-Type: application/json
   "Name": "New name",
   "Description" : "Nice plate",
   "HasDelivery" : true
+}
+
+###
+
+
+POST {{Restaurants.API_HostAddress}}/api/restaurant/31/dishes
+Content-Type: application/json
+
+{
+ "Name": "My restau",
+ "Description": "Best restau",
+ "Price": 33,
+ "Kilocalories": 1050
 }
 
 ###
