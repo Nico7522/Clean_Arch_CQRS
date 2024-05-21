@@ -1,5 +1,5 @@
 @Restaurants.API_HostAddress = https://localhost:7191
-
+@Token = CfDJ8E7t732Ktx1NiejmLG_uPm12V5hhtjAOvgLh2jalQInzx-6cyiSZ-lprPi03rEyR2vi_cLag_cl7KP7EbT4xmyUWt-Ihx9XHE4gCJuf762GobDmVSxbeSJMAWmtHSk__a1c1H5l3U60Y4TuT0jQNIFc0esyMaFJdtJn8nqABuU3MaP9sQtSEBlJo8jQ_63pidC4DeH2NDc1HNf6GihP84gj8GMnzpzcovu2rIC6Jmxnxwv57g5IHU9WVvtYbkMrLDMb4i6lmFbqfUdX3zTju0-yyndARDY9hAyTryF5OPtDH6GDsu5IFw8hS6FR1-TDl6HNNXu5B26BacPkOgX1BTlIvYAX94Q4rikumgtewj8L86uH-75jlU1CKYHidLXQZsC45hR3_D081dwVnfuCZDyGEXD1Q9Nt3dS9zZGLJgLZSNKQXjvnU2ol7Pv8CbyaoUZpR5ydE85plomzCGXJiZHm_DTNI2BPuVmXWYMKRAKLxHlaJgh3i_1yNB6Dfs2u-sfNG50JQ7iPT-v9o3GWLnlLz6DRNRw8OeaFKzDHhdYEQmKqN2ty00hrOZfgIPyvWcYnTOBU2O6PkfgGtjXPZ8X1DpRsQ1UF_eyMqiOvM8lC3qgRdkNf9hCJnvng95H4DNrnJOE9U2K9UOve3BrNjUm1PRoEMoi0geeEu9xKC8MMBnV9PVhjqFRCPh80HbjhGlA
 
 GET {{Restaurants.API_HostAddress}}/weatherforecast
 
@@ -16,7 +16,7 @@ Content-Type: application/json
 ###
 
 GET {{Restaurants.API_HostAddress}}/api/restaurants
-
+Authorization: Bearer {{Token}}
 ###
 
 GET {{Restaurants.API_HostAddress}}/api/restaurants/3
@@ -56,14 +56,42 @@ Content-Type: application/json
 ###
 
 
-POST {{Restaurants.API_HostAddress}}/api/restaurant/31/dishes
+POST {{Restaurants.API_HostAddress}}/api/restaurant/3/dishes
 Content-Type: application/json
 
 {
- "Name": "My restau",
- "Description": "Best restau",
+ "Name": "Spaghetti",
+ "Description": "Best spaghetti eu",
  "Price": 33,
  "Kilocalories": 1050
 }
 
 ###
+
+GET {{Restaurants.API_HostAddress}}/api/restaurant/2/dishes
+
+###
+
+GET {{Restaurants.API_HostAddress}}/api/restaurant/3/dishes/4
+
+###
+
+DELETE {{Restaurants.API_HostAddress}}/api/restaurant/3/dishes
+
+###
+POST {{Restaurants.API_HostAddress}}/api/identity/register
+Content-Type: application/json
+
+{
+  "email": "test@gmail.com",
+  "password": "@Test12345"
+}
+
+###
+POST {{Restaurants.API_HostAddress}}/api/identity/login
+Content-Type: application/json
+
+{
+  "email": "test@gmail.com",
+  "password": "@Test12345"
+}
