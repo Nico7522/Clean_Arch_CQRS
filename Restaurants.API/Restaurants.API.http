@@ -1,5 +1,5 @@
 @Restaurants.API_HostAddress = https://localhost:7191
-@Token = CfDJ8E7t732Ktx1NiejmLG_uPm12V5hhtjAOvgLh2jalQInzx-6cyiSZ-lprPi03rEyR2vi_cLag_cl7KP7EbT4xmyUWt-Ihx9XHE4gCJuf762GobDmVSxbeSJMAWmtHSk__a1c1H5l3U60Y4TuT0jQNIFc0esyMaFJdtJn8nqABuU3MaP9sQtSEBlJo8jQ_63pidC4DeH2NDc1HNf6GihP84gj8GMnzpzcovu2rIC6Jmxnxwv57g5IHU9WVvtYbkMrLDMb4i6lmFbqfUdX3zTju0-yyndARDY9hAyTryF5OPtDH6GDsu5IFw8hS6FR1-TDl6HNNXu5B26BacPkOgX1BTlIvYAX94Q4rikumgtewj8L86uH-75jlU1CKYHidLXQZsC45hR3_D081dwVnfuCZDyGEXD1Q9Nt3dS9zZGLJgLZSNKQXjvnU2ol7Pv8CbyaoUZpR5ydE85plomzCGXJiZHm_DTNI2BPuVmXWYMKRAKLxHlaJgh3i_1yNB6Dfs2u-sfNG50JQ7iPT-v9o3GWLnlLz6DRNRw8OeaFKzDHhdYEQmKqN2ty00hrOZfgIPyvWcYnTOBU2O6PkfgGtjXPZ8X1DpRsQ1UF_eyMqiOvM8lC3qgRdkNf9hCJnvng95H4DNrnJOE9U2K9UOve3BrNjUm1PRoEMoi0geeEu9xKC8MMBnV9PVhjqFRCPh80HbjhGlA
+@Token = CfDJ8E7t732Ktx1NiejmLG_uPm0v93lePT3F-Hwfj3TsrG0snWYAMO3BTHI_f3yrpnARGQG-MaK50UlR_GJA1D4j9Gq5-loicwcY8akYhoF4ckClAgOhpLbURW_R142O88Z1mw_EqSTFX8kUu3DDgA6yZLMgEnaMsnORP9GEe4WoPDAagq2r1Iby4CJpspcg6eRClHvmQUr2RwesR-epz7G6IkckTSjwzqlG_LZ4aQ-jkcHfZ15P-VtzNfTac4OqBSMzHjwQtorDkkldw-6LbYqJ0hSmCAu2bzRKoRdptHJJseOniC-yunmsFcX7f3KgnEJv_TJztjMo0fiUaX6QsNrw2bVpOsS3-FgNPWIaiBnORNNd5I5wbRggv0vFgTyKcNsbTpECWjhePO3OrKwpxMqrW7mGPhbU-N4XzvvgUK7z5ecsEVmtj33zRSykvbpLuQ6886PfaUltdnXRmjj9BKoXUPTJXqRuz2cyTHCigoWgMehd1-uy5gQ9gyrqrFuwnfiApuDdhfmOtceVjnFRQGGIIT-gdtPQA51-zFpBw3wnH-cJZ6aHGgZ_hcWHAwzfHxEAi6x8DOQ02u8oIwf0vIFMvAy6dlHnFYvB6hzyrPrSS82tNK3dZ9FhfjJn-8wnFhAEAZJNpYqxOhkATWvtM0-LwZU9Zuumjm4_KoZlVXk3W68wwPy-0qbiLjqH2pa2set4Vv89GWkC-AZXhxyJGWOnuG9E_zRkG4tAUVelB-JDci85w-LWTYOwTZcuQlx7aRX9rybb8gBRLP1vztTP5hUQb0AuRPXzCKnWHFHGLZ_xTSAS
 
 GET {{Restaurants.API_HostAddress}}/weatherforecast
 
@@ -15,7 +15,7 @@ Content-Type: application/json
 
 ###
 
-GET {{Restaurants.API_HostAddress}}/api/restaurants
+GET {{Restaurants.API_HostAddress}}/api/restaurants?SearchPhrase=KFC
 Authorization: Bearer {{Token}}
 ###
 
@@ -24,10 +24,11 @@ GET {{Restaurants.API_HostAddress}}/api/restaurants/3
 ###
 
 POST {{Restaurants.API_HostAddress}}/api/restaurants
+Authorization: Bearer {{Token}}
 Content-Type: application/json
 
 {
-    "Name": "Le Gourmet Français",
+    "Name": "Le Gourmet Françaiss",
     "Description": "Un restaurant chic offrant une expérience culinaire française authentique avec des ingrédients frais et locaux.",
     "Category": "Italian",
     "HasDelivery": false,
@@ -83,7 +84,7 @@ POST {{Restaurants.API_HostAddress}}/api/identity/register
 Content-Type: application/json
 
 {
-  "email": "test@gmail.com",
+  "email": "user@gmail.com",
   "password": "@Test12345"
 }
 
@@ -92,6 +93,6 @@ POST {{Restaurants.API_HostAddress}}/api/identity/login
 Content-Type: application/json
 
 {
-  "email": "test@gmail.com",
+  "email": "owner@gmail.com",
   "password": "@Test12345"
 }
