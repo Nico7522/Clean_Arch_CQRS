@@ -15,7 +15,7 @@ Content-Type: application/json
 
 ###
 
-GET {{Restaurants.API_HostAddress}}/api/restaurants?SearchPhrase=KFC
+GET {{Restaurants.API_HostAddress}}/api/restaurants?SearchPhrase=&pageSize=5&pageNumber=1&sortBy=Name&sortDirection=Ascending
 Authorization: Bearer {{Token}}
 ###
 
@@ -96,3 +96,7 @@ Content-Type: application/json
   "email": "owner@gmail.com",
   "password": "@Test12345"
 }
+
+GET {{Restaurants.API_HostAddress}}/api/restaurants
+
+###
