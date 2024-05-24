@@ -5,11 +5,13 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Restaurants.API", "Restaurants.API\Restaurants.API.csproj", "{0E909550-5BD6-4895-AD09-6A087FDA8AF0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Restaurants.Domain", "Restaurants.Domain\Restaurants.Domain.csproj", "{7C836FF2-0F99-452F-BF02-000E99A4C1F8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Restaurants.Domain", "Restaurants.Domain\Restaurants.Domain.csproj", "{7C836FF2-0F99-452F-BF02-000E99A4C1F8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Restaurants.Application", "Restaurants.Application\Restaurants.Application.csproj", "{D8CB00C0-A7E4-4EC2-9F61-20C47163E46B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Restaurants.Application", "Restaurants.Application\Restaurants.Application.csproj", "{D8CB00C0-A7E4-4EC2-9F61-20C47163E46B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Restaurants.Infrastructure", "Restaurants.Infrastructure\Restaurants.Infrastructure.csproj", "{927C1A3B-8801-43F1-BEC2-3C291A349EF3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Restaurants.Infrastructure", "Restaurants.Infrastructure\Restaurants.Infrastructure.csproj", "{927C1A3B-8801-43F1-BEC2-3C291A349EF3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Restaurants.ApplicationTests", "Restaurants.ApplicationTests\Restaurants.ApplicationTests.csproj", "{58FE4FBA-2986-4F50-808B-A8B8C93C90E6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{927C1A3B-8801-43F1-BEC2-3C291A349EF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{927C1A3B-8801-43F1-BEC2-3C291A349EF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{927C1A3B-8801-43F1-BEC2-3C291A349EF3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58FE4FBA-2986-4F50-808B-A8B8C93C90E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58FE4FBA-2986-4F50-808B-A8B8C93C90E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58FE4FBA-2986-4F50-808B-A8B8C93C90E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58FE4FBA-2986-4F50-808B-A8B8C93C90E6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
