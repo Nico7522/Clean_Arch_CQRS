@@ -7,7 +7,8 @@ namespace Restaurants.Infrastructure.Authorization.Requirements;
 internal class CreatedMultipleRestaurantRequirementHandler(IRestaurantsRepository restaurantsRepository,
     IUserContext userContext) : AuthorizationHandler<CreatedMultipleRestaurantRequirement>
 {
-    protected async override Task HandleRequirementAsync(AuthorizationHandlerContext context, CreatedMultipleRestaurantRequirement requirement)
+
+    protected override async Task HandleRequirementAsync(AuthorizationHandlerContext context, CreatedMultipleRestaurantRequirement requirement)
     {
         var currentUser = userContext.GetCurrentUser();
         var restaurants = await restaurantsRepository.GetAllAsync();

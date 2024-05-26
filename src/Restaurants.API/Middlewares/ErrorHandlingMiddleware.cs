@@ -20,7 +20,7 @@ public class ErrorHandlingMiddleware(ILogger<ErrorHandlingMiddleware> logger) : 
         }
 		catch(ForbidException ex)
 		{
-			context.Response.StatusCode = 400;
+			context.Response.StatusCode = 403;
 			await context.Response.WriteAsync("Access forbidden");
 		}
 		catch (Exception ex)
